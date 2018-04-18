@@ -20,6 +20,8 @@ filter( flights, month==1, day==30)
 filter( flights, month==1 || day==30)
 # lists
 filter( flights, month %in% c(1:3) || day==30)
+# xor
+filter( flights, xor(month==1, day==30))
 ```
 
 filter a range:
@@ -135,11 +137,16 @@ flights %>%
 groups data together and aggregates with a function.
 *Very complicated in R. Use: tapply() or aggregate()*
 
+Grouping does not copy the data. 
+Instead an index is build (uses a little more memory).
+
 ```R
 flights %>%
   group_by( Destination ) %>%
   summarise( arrdel = mean(ArrivalDelay) )
 ```
+
+`mean()` logical vectors to get the fraction of `TRUE` values.
 
 `summarise_each` summarises for multiple columns.
 
@@ -322,3 +329,8 @@ data_frame(
   c="string" # is not build into a factor
   "d+e" = 1 # name is not changed
 ```
+
+Read in `.csv` files with:
+
+```R
+name <- tbl_df(read.csv("<file>"))
