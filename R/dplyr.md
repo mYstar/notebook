@@ -11,6 +11,7 @@ There are different base functions:
 ## filter
 
 Shows rows matching some critera.
+**Tip:** transform into a `mutate()` for viewing the result of checks.
 
 ```R
 flights[flights$month==1 & flights$day==30, ]
@@ -67,12 +68,12 @@ flights %>%
 
 ## select
 
-Selects columns by name.
+Selects columns by name. Renaming possible.
 
 ```R
 flights[, c("Time", "Month", "Day"]
 # -->
-select(flights, Time, Month, Day)
+select(name = flights, clock = Time, Month, Day)
 # ranges
   Time:Day  
 # text search:
@@ -105,6 +106,7 @@ flights %>% select(one_of(cols))
 ## arrange  
 
 order the table by column values.
+*!Beware: very costly, because data has to be copied for that!*
 
 ```R
 flights[order(flights$Delay), c("UniqueCarrier", "Delay")]
@@ -196,6 +198,23 @@ flights %>%
 So if `arrange()` is called, `ungroup` could be necessary.
 (When a `group_by()` with multiple categories is involved.)
 
+### custom summarise functions with DO  
+
+Is slower, but can run arbitrary code.
+Uses `.` to represent current Group.
+
+```R
+flights %>%
+  group_by(dep_delay) %>%
+  do(
+    mod = lm( ., ... )
+    # calculate a linear model for each day 
+    # has to be named, because it does not return DF
+  )
+  # without naming
+  do( head(., 2) )
+```
+
 ### group calculations
 
 count the group members and return a **vector**.
@@ -208,9 +227,32 @@ flights %>%
   n_groups
 ```
 
+### grouped filtering/selection 
+
+The grouping of a DF is consistent, event if the `print()` does not show it.
+It is appended as an attribute to the DF.
+I.e. when you store a grouped DF and after that `filter()` it, you can use summarisation functions.
+
+```R
+planes  <- flights %>%
+  group_by(plane) 
+
+# this performs mean and sd per group 
+# here: per plane
+planes %>%
+  mutate( z_delay = (arr_delay - mean(arr_delay)) / sd(arr_delay) ) 
+```
+
+
 ## window functions 
 
 take n values and returns n values (like: `rank()`)
+But do not operate row by row (need more input).
+
+Types:
+* ranking and ordering
+* offsets
+* accumulate aggregates
 
 ```R
 flights %>%
@@ -224,7 +266,15 @@ flights %>%
   top_n(2)
 ```
 
+different dealing with ties:
+* `dense_rank()` is like `min_rank()` only it does not skip numbers after ties.
+* `row_number()` gives an ordering, randomly deciding ties.
+
 lag uses the value from the last row.
+In contrast to `diff()` it takes **n** arguments and produces **n** results (first is `NA`).
+Arguments: 
+* `default=` sets the value for the fist row (e.g. `0.0`).
+* `order_by=` sets an ordering column (to avoid `arrange`)
 
 ```R
 flights %>%
@@ -259,7 +309,8 @@ a %>% inner_join(b, by=c("color", "colour"))
 
 # Databases
 
-init: `my_db <- src_sqlite("...")`
+init: `my_db <- src_sqlite("...")`, use: `create=TRUE` to create a new one.
+Put data into the database: `copy_to(..., indexes= list(...), temporary=FALSE)`
 
 get table: (just sets up a connection)
 
@@ -270,6 +321,7 @@ flights_tbl <- tbl(my_db, "flights")
 
 execute sql: `tbl(my_db, "statement")`
 get the SQL code: `%>% explain`
+
 
 # additional Tips:
 
