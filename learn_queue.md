@@ -3,6 +3,10 @@
 * **R** -- dplyr concepts: downloaded
 * what is a z-score???
 * ggviz for R
+freakshow -  
+vid kommandozeilentools
++ tmux
+
 
 # maybe in the future:
 
