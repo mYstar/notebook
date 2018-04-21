@@ -1,12 +1,10 @@
-# Tutorials and webinars
+# next interesting items
 
 * **R** -- dplyr concepts: downloaded
 * what is a z-score???
 * ggviz for R
-freakshow -  
-vid kommandozeilentools
-+ tmux
-
+* fzf fuzzy file searcher
+* izdiff
 
 # maybe in the future:
 
