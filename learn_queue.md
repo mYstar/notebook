@@ -2,9 +2,10 @@
 
 * **R** -- dplyr concepts: downloaded
 * what is a z-score???
-* ggviz for R
+* svn tutorial
 * fzf fuzzy file searcher
 * izdiff
+* ggviz for R
 
 # maybe in the future:
 
