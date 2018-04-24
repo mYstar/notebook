@@ -18,3 +18,11 @@ flights %>%
   select( UniqueCarrier, DepDelay )
 ```
 
+Assignments van be made with `%<>%` as the first operator in a chain.
+And `%$%` can be used for functions with **no data argument**.
+
+```R
+iris %>%
+  subset(Sepal.Length > mean(Sepal.Length)) %$%
+  cor(Sepal.Length, Sepal.Width)
+```

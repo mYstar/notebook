@@ -150,12 +150,13 @@ flights %>%
 
 `mean()` logical vectors to get the fraction of `TRUE` values.
 
-`summarise_each` summarises for multiple columns.
+`summarise_all` and `summarise_at` summarises multiple columns.
 
 ```R
 flights %>%
   group_by( UniqueCarrier ) %>%
-  summarise_each( funs(mean), Cancelled, Diverted )
+  summarise_all( funs(mean), Cancelled, Diverted )
+  summarise_at( vars(Cancelled, Diverted), funs(mean))
 # powerful selection
   funs(min, max(., na.rm=TRUE)), matches("Delay")
 # uses different funcs (appends _min, _max to result column)

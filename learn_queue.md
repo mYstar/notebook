@@ -1,7 +1,6 @@
 # next interesting items
 
-* **R** -- dplyr concepts: downloaded
-* what is a z-score???
+* tidy data paper [~/Documents/work/promotion/learn/tidy-data.pdf]()
 * svn tutorial
 * fzf fuzzy file searcher
 * izdiff

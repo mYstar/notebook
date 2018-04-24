@@ -6,6 +6,38 @@
 * visualization: `ggvis`
 * transform: `dplyr`
 
+## z-score  
+
+Calculates for every datapoint,
+how many standard-deviations it is away from the mean of the sample.
+Can be positive (higher than the mean) and negative (lower).
+Is calculated from the Mean and Standard Deviation.
+
+![z-score](./img/z-score.gif "Z-Score")
+
+**Usage:**
+* compare a value relative to the others in a set 
+    * together with standard distribution table: see how many values are above (relative)
+* compare values, that come from different normal distributions
+    * e.g.: compare maths mark to physics (when knowing the results for the whole class)
+* reverse calculating which value has to be succeded to achieve to be in the top X% of the dataset
+
+## tidy data  
+
+Also: "tight data".
+Is commonly seen in a **column-format**.
+There is a column header (= variable name) and the rows contain the values.
+
+**No:**
+* rownames  
+* values in column header (e.g. dates) called: cases-data
+* extra distinction of variables in separate column (e.g. small/large particles)
+
+**How:**
+1. Each variable in own column.
+2. Each observation in own row.
+3. All observations in one table.
+
 # databases 
 
 * **query plans** are a db prediction how long a query would take: [http://www.sqlite.org/queryplanner.html]()
