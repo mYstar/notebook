@@ -52,18 +52,18 @@ nameserver 127.0.0.1
 ```
 
 **Solution:** short term: edit nameserver to: `1.0.0.1`.
-Long term: edit `/etc/network/interfaces`:
+Long term: edit `/etc/NetworkManager/NetworkManager.conf`:
 
 ```bash
-# after this line
-iface lo inet loopback
+# after this lines
+[main]
+plugins=ifupdown,keyfile,ofono
 # insert
-dns-nameservers 1.0.0.1 1.1.1.1
-#second one is alternate
+dns=dnsmasq
 ```
 
 then invoke:
 
 ```bash 
-systemctl restart networking.service
+sudo service network-manager restart
 ```
