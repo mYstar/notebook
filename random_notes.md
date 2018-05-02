@@ -42,7 +42,9 @@ There is a column header (= variable name) and the rows contain the values.
 
 * **query plans** are a db prediction how long a query would take: [http://www.sqlite.org/queryplanner.html]()
 
-# linux networking
+# linux 
+
+## networking
 
 **Problem:** cisco vpn reconfigures DNS server and does not restore it after disconnect.
 **Indicator**: No DNS answers (no net) and something like this in `/etc/resolv.conf`:
@@ -67,3 +69,13 @@ then invoke:
 ```bash 
 sudo service network-manager restart
 ```
+
+## grub
+
+**Problem:** display distortions with Jennys netbook (graphics chip: *Intel GMA 950*)
+**Solution:** 
+
+1. Breakup a startup after grub to force it to display grub-screen on next startup.
+2. Select the linux start entry and edit with: `e`.
+3. insert `i915.modeset=1` in front of `quiet` in kernel start line
+4. Continue the start.

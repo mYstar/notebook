@@ -1,6 +1,5 @@
 # next items 
 
-- vimplug for neovim??
 - vim: 'roxma/nvim-completion-manager' 
 - zeal: build R documentation for dplyr
   * [https://kapeli.com/docsets#dashDocset]()
