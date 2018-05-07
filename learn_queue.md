@@ -1,6 +1,7 @@
 # next interesting items
 
 * tidy data paper [~/Documents/work/promotion/learn/tidy-data.pdf]()
+   * next: 3.2.
 * svn tutorial
 * fzf fuzzy file searcher
 * izdiff
