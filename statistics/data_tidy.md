@@ -85,3 +85,55 @@ Solution:
 * creates: 2 different columns  
     1. column name
     2. value
+
+**more complex:** one column is multiple variables. like this header:
+
+| country | year | m014 | m1524 | m2534 | m3544 | m4554 | m5564 | m65 | mu | f014 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| AD | 2000 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | - | - | - |
+
+Here the sex (`m|f`) and the age group (`1524` --> 15 to 24) is coded.
+
+Solution:
+1. melt 
+2. split the variables in the header variables
+
+### values are variable names 
+
+There is a column (`element`), that describes for which variable (`tmax`, `tmin`) the next values stand:
+
+| id | date | element | value |
+| MX17004| 2010-01-30| tmax| 27.8 |
+| MX17004| 2010-01-30| tmin| 14.5 |
+| MX17004| 2010-02-02| tmax| 27.3 |
+| MX17004| 2010-02-02| tmin| 14.4 |
+
+Solution: Use a `cast` operation to make separate columns for all the different factors of `element`.
+
+### multiple observations in one table  
+
+Manifests itself through duplication of values.
+
+| year | artist | time | track | date |week | rank |
+| 2000| 2 Pac| 4:22| Baby Don’t Cry| 2000-02-26| 1| 87 |
+| 2000| 2 Pac| 4:22| Baby Don’t Cry| 2000-03-04| 2| 82 |
+| 2000| 2 Pac| 4:22| Baby Don’t Cry| 2000-03-11| 3| 72 |
+| 2000| 2 Pac| 4:22| Baby Don’t Cry| 2000-03-18| 4| 77 |
+
+Here: the title and ranking data are joined.
+
+Solution: normalization (dividing the data)
+For some use cases, the data has to be joined again temporarily.
+
+### one type in multiple tables/files 
+
+Sometimes every observation writes its own file. Then the files have to be combined into one table:
+
+```R
+paths <- dir("data", pattern = "\\.csv$", full.names = TRUE)
+names(paths) <- basename(paths)
+ldply(paths, read.csv, stringsAsFactors = FALSE)
+```
+
+Then other tidying can proceed.
+**TODO:** uses plyr --> How to use tidyr/dplyr for this.

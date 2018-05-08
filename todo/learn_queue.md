@@ -1,7 +1,8 @@
 # next interesting items
 
-* tidy data paper [~/Documents/work/promotion/learn/tidy-data.pdf]()
-   * next: 3.2.
+* TODO: plyr way of reading multiple files into one table
+* linear models and resuduals (also: log-log scale)
+* broom for R
 * svn tutorial
 * fzf fuzzy file searcher
 * izdiff
