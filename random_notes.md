@@ -79,3 +79,8 @@ sudo service network-manager restart
 2. Select the linux start entry and edit with: `e`.
 3. insert `i915.modeset=1` in front of `quiet` in kernel start line
 4. Continue the start.
+
+# Shortcuts
+
+Set keyboard layout switcher with: `gsettings set org.gnome.desktop.wm.keybindings switch-input-source"['<Shift>Space']"`
+**Shift + Space** is now the shortcut for this.

@@ -1,7 +1,6 @@
 # next interesting items
 
 * TODO: plyr way of reading multiple files into one table
-* linear models and resuduals (also: log-log scale)
 * broom for R
 * svn tutorial
 * fzf fuzzy file searcher
