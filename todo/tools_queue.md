@@ -1,5 +1,6 @@
 # next items 
 
+- vimb browser
 - vim: 'roxma/nvim-completion-manager' 
 - vim: no _ to <- in R plugin
 - zeal: build R documentation for dplyr

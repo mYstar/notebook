@@ -104,3 +104,7 @@ storms-separated %>%
   unite("date",   year, month, day, sep="-")
 #      | colname | cols to combine | separator |
 ```
+
+## unnest
+
+combines a nested dataframe into a flat one

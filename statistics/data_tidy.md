@@ -136,4 +136,4 @@ ldply(paths, read.csv, stringsAsFactors = FALSE)
 ```
 
 Then other tidying can proceed.
-**TODO:** uses plyr --> How to use tidyr/dplyr for this.
+*see:* [R/purrr.md](R/purrr.md) for a more dplyr way to do this (map, reduce)
