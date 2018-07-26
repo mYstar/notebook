@@ -62,3 +62,7 @@ auch: `watch progress -wc firefox`
 ## tldr
 
 a little script + python project for simplifying man-pages.
+
+## network manager
+
+`sudo service network-manager restart`

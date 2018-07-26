@@ -29,3 +29,14 @@
 ## Workspaces
 * `Win+Number`: **move** to workspace number X
 * `Win+Shift+Number`: move active **window** to workspace number X
+
+## own Keybindings
+* bound `jkl;` to `hjkl` (vim style)
+* `Mod+Shift+x` lock screen
+* `Mod+Shift+s` gnome settings
+
+## tools/programs
+
+* change display settings: `arandr`
+* view slideshows: `feh`
+* view windowproperties: `xprop`

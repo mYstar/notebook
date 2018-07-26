@@ -2,6 +2,8 @@
 
 - keine Ausgaben von Befehlen mit: `suppressMessages()`
   * geil bei: `library()`
+* geladene Datensätze: `data()`
+    * `package="ggplot2"` zeigt nur die eines packages an
 
 ## chaining/pipe
 
@@ -28,3 +30,8 @@ iris %>%
   subset(Sepal.Length > mean(Sepal.Length)) %$%
   cor(Sepal.Length, Sepal.Width)
 ```
+
+## reproducible examples (for stackoverflow)
+
+* use package `reprex`
+    * [https://github.com/tidyverse/reprex](reprex)

@@ -7,6 +7,6 @@
     * divide experiment results and metadata (key: experiment name)
     * tukey HSD no generations (cmp_from --> exp_from ...)
 * [X] refactor VD A^12
-* [ ] + Levenes test (common Variance)
-* [ ] add runtime to metrics
-* [ ] refactor writing
+* [X] + Levenes test (common Variance)
+* [X] add runtime to metrics
+* [X] refactor writing
