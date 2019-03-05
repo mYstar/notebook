@@ -9,10 +9,17 @@
 * [X] (20.07.) Modelle hochladen, 13 Maschinen Modell verwenden
 * [X] alle Statistiken in einen Tab packen
 * [X] QC -> Scatterplot (others too?)
-* [ ] add summary to box stacker view
-* [ ] add new machines in read.R
-* [ ] Umstellung auf neues Statisikmodell
-* [ ] fullscreen feature?
+* [X] add summary to box stacker view
+* [X] add new machines in read.R
+* [X] Umstellung auf neues Statisikmodell
+* [X] add new filechecks for new files (app)
+* [X] ! validate: lifter -> IntervalIdlePercentage correct?
+* [X] add old machine statistics to model
+* [X] implement new machine File
+* [X] bug: piecharts not individually scaled
+* [X] Visualisation of Boxcount at machines
+* [X] fullscreen feature?
+* [X] loading spinners on recalculation
 
 # Simulationsstudie
 
@@ -49,45 +56,47 @@
     * [X] (1:00) Warteschlange bauen + Länge messen
     * [X] (1:00) Test 2: Abarbeitungszeit in Stufen zwischen Mittelwert und Max setzen
     * [X] Visualisierung Warteschlange
-* [ ] (2:00) Auslastung Lifter:
-    * [ ] (0:30) Einlesen Zustandsdaten
-    * [ ] (0:30) Berechnung der prozentualen Verteilung
-    * [ ] (0:30) Visualisierung: Kuchendiagramm
-    * [ ] (0:30) Test: Werte bei verändertem auto homing
+* [X] (2:00) Auslastung Lifter:
+    * [X] (0:30) Einlesen Zustandsdaten
+    * [X] (0:30) Berechnung der prozentualen Verteilung
+    * [X] (0:30) Visualisierung: Kuchendiagramm
+    * [X] (0:30) Test: Werte bei verändertem auto homing
 * [X] (2:30) Box Stacker:
     * [X] (0:30) Einlesen Kistenmengen und Typ
     * [X] (1:00) Berechnung: Anzahl Kisten nach Rang / Zeit
     * [X] (1:00) Visualisierung: mehrere Boxplots
-* [ ] (2:00) Loop:
-    * [ ] (0:30) Einlesen Füllstand nach Typen
-    * [ ] (0:30) Berechnung Durchschnittswerte nach Warmlaufen
-    * [ ] (1:00) Visualisierung: Tortendiagramm oder Zeitverläufe
-* [ ] Lager Output in Richtung der Anlage:
-    * [ ] (1:00) Daten: statistik erstellen, Daten erfassen
-    * [ ] (0:30) calc: Output  
-    * [ ] (1:00) Visualisierung
+    * [X] (0:30) exportierte Daten einlesen
+    * [X] (0:30) daten in tidy format bringen
+    * [X] (1:30) Visualisierung (stacked Area)
+* [X] (2:00) Loop:
+    * [X] (0:30) Einlesen Füllstand nach Typen
+    * [X] (0:30) Berechnung Durchschnittswerte nach Warmlaufen
+    * [X] (1:00) Visualisierung: Tortendiagramm oder Zeitverläufe
+* [X] Lager Output in Richtung der Anlage:
+    * [X] (1:00) Daten: statistik erstellen, Daten erfassen
+    * [X] (0:30) calc: Output  
+    * [X] (1:00) Visualisierung
 * Milestone: Auswertung vollständig
 * [X] (2:00) Visualisierung: Implementierung Vergleichsmöglichkeit
-* [ ] (3:00) Szenario: Maschinenanzahl
-    * [ ] (1:30): Erstellen der Modelle
-    * [ ] (1:00) Durchführen der Szenarien
-    * [ ] (0:30) Zusammenfassen der Ergebnisse
+* [X] (3:00) Szenario: Maschinenanzahl
+    * [X] (1:30): Erstellen der Modelle
+    * [X] (1:00) Durchführen der Szenarien
+    * [X] (0:30) Zusammenfassen der Ergebnisse
 * [ ] (1:30) Szenario: extra Sammelkunde
     * [ ] (0:30) anpassen der Daten
     * [ ] (0:30) Durchführen der Szenarien
     * [ ] (0:30) Zusammenfassen der Ergebnisse
-* [ ] (2:30) Szenario: zufällige Produktionszeiten
-    * [ ] (1:30): Erstellen der Modelle, anpassen der Excel Sheets
-    * [ ] (0:30) Durchführen der Szenarien
-    * [ ] (0:30) Zusammenfassen der Ergebnisse
-* [ ] (1:30) Szenario: Vorproduktion der Boxen
-    * [ ] (0:30) Anpassung Modell
-    * [ ] (0:30) Durchführen der Szenarien
-    * [ ] (0:30) Zusammenfassen der Ergebnisse
-* [ ] (1:00) Szenario: Lagerauslastung
-    * [ ] (essel) Daten bereitstellen
-    * [ ] (0:30) Durchführen der Szenarien
-    * [ ] (0:30) Zusammenfassen der Ergebnisse
+* [X] (2:30) Szenario: zufällige Produktionszeiten
+    * [X] (1:30): Erstellen der Modelle, anpassen der Excel Sheets
+    * [X] (0:30) Durchführen der Szenarien
+    * [X] (0:30) Zusammenfassen der Ergebnisse
+* [X] (1:30) Szenario: Vorproduktion der Boxen
+    * [X] (0:30) Anpassung Modell
+    * [X] (0:30) Durchführen der Szenarien
+    * [X] (0:30) Zusammenfassen der Ergebnisse
+* [X] (1:30) Szenario: linespeed
+* [ ] (1:30) Szenario: Quality control
+    * wird an den Maschinen eingetragen
 * Milestone: Szenarien fertig
 
 # refactor 1
@@ -105,9 +114,27 @@
 * [X] backup/SVN
 
 # r server
-* [ ] install R and all packages
-* [ ] pull svn
-* [ ] start servers
-* [ ] make accessible
-* [ ] test
-* [ ] write email
+* [X] install R and all packages
+* [X] pull svn
+* [X] start servers
+* [X] make accessible
+* [X] test
+
+# meeting 06.08
+* [X] vpn connection (Lütkemeier, Nieke)
+    * email: + .csv export
+* [X] VC neuinstall
+* [X] box stacker:
+    * [X] check calculations
+    * [X] max --> time and product
+* [X] warehouse:
+    * [X] + verschlusskommissionierung
+    * [X] in- and output: + output to line  
+    * [X] in and out: 2 modi (directed, load)
+    * [X] summary: +output
+* [ ] documentation: statistic
+
+# meeting 24.08.
+* [X] zu viele caps ausgelagert
+* [X] standardmodell 2x linespeed, weibull
+* [X] machines tab: tuben pro tag pro maschine

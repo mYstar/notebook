@@ -66,3 +66,6 @@ a little script + python project for simplifying man-pages.
 ## network manager
 
 `sudo service network-manager restart`
+
+## convert xls to csv
+`for f in *.xlsx; do libreoffice --headless --convert-to csv $f --outdir .;done`

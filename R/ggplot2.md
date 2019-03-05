@@ -42,6 +42,8 @@
     * fixed (not scaled by data value) parameters here
     * e.g. `geom_point(colour="Blue")`
     * or use color to name plot elements `geom_point(colour='qc cycle')`
+    * perform a (different) statistical calculation before displaying with `stat=`
+        * `geom_point(stat='summary', fun.y='mean')`
 4. save the plot  
     * with `ggsave()`
     * or: `saveRDS()` saves a raw plot object
@@ -182,4 +184,46 @@ geom_text(aes(label = text))
 ## scales
 
 * map the values (defined in `aes()`) to optical properties (e.g. colors)
+* in default ggplot2 already creates a scale for every data column
+* they can be changed by the `scale_<aestetic>_<type>`-functions
+    * `aestetic` can be: `x`, `y`, `color`
+    * `type`  can be: `discrete`, `continous`, `identity`
+        * there is a special scale: `brewer` for colors
 * if there are colors already in the data use: `+ scale_color_identity()`
+
+### customising
+
+* standard: use `scale_x_continuous()`
+    * alternatives: `x`|`y`|`color`|`fill`, `continous`|`discrete`|`log10`
+    * `NULL` deletes the corresponding element (`''` does not remove whitespace)
+    * first argument is the name  
+    * `breaks=` defines tickmarks
+    * `minor_breaks=` defines the guidelines between the tickmarks
+    * `labels=` defines text at tickmarks (you must set `breaks` when using this)
+        * for `discrete`: use named arguments (e.g. `labels=c(fileset1='standard', fileset2='machines 9')`)
+* helper functions: `xlab()`, `ylab()`
+    * `labs()` defines titles for all mappings in `aes()` (e.g. `color`-legend)
+
+## stats  
+
+* calculate a statistical operation on the data 
+* generate new variables (in the form `..variable..`)
+* see documentation of the `stat` for a list of the variables
+
+## position
+
+* changes the position of overlapping elements  
+* mostly used for stacking
+* used with `position = ''`:
+    * for **bars**, **boxplots**, **areas**
+    * `stack` just stacks the elements not changing their heights 
+    * `fill` stacks elements but scales the height to 1.0
+    * for **points**
+    * `nudge` moves points by offset
+    * `jitter` creates random movement
+    * `dodgejitter` dodges the points (no overlap) and adds a random element to it
+    * `dodge` displays the elements side by side
+* instead of the string functions can be used, e.g.
+    * `position_stack()`
+    * `position_jitter()`
+    * advantages: control over the parameters, autocompletion
