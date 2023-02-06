@@ -28,7 +28,7 @@ Ermittelt Geschwindigkeit + MTU.
 Noch schöner: `mtr` == mytraceroute.
 Ist ein `ping` + `traceroute` und hat bessere Darstellung.
 
-## ifconfig 
+## ifconfig
 
 sind out --> kann alles mit dem tool: `iproute2` erreicht werden.
 
@@ -68,4 +68,5 @@ a little script + python project for simplifying man-pages.
 `sudo service network-manager restart`
 
 ## convert xls to csv
+
 `for f in *.xlsx; do libreoffice --headless --convert-to csv $f --outdir .;done`
