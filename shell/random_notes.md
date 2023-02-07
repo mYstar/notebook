@@ -13,6 +13,7 @@ systemctl start <tool>
 systemctl stop <tool>
 systemctl restart <tool>
 systemctl status <tool>
+systemctl is-active <service>
 ```
 
 ## dig

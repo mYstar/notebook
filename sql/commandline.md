@@ -1,0 +1,3 @@
+- disable strict mode: */etc/mysql/mariadb.conf.d/50-server.cnf* --> first line: `sql_mode=NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION`
+    - `NO_AUTO_CREATE_USER`: no automatic user creation when `GRANT` is called
+    - `NO_ENGINE_SUBSTITUTION`: creates an error when **storage engine** is not available on `CREATE TABLE`, else default is used
