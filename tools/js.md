@@ -1,10 +1,13 @@
-# DOM
+# functions
+- match in array: `['a', 'b', 'c'].includes('b')`
+## DOM
 
 - forms have an reset Event: `$('form').reset()`
     - in jquery: `$('form').trigger('reset')`
     - as button: ` <input type="reset">`
 - `element.checkValidity()`: check form input, returns false and an error if sth. is wrong
 - `element.reportValidity()`: check form input, returns false and displays hints sth. is wrong
+- focus: `document.activeElement`
 
 # Packages
 
@@ -52,11 +55,13 @@
 ### events
 - create: `$('selector').<event>(function)`
 - event functions:
-    - `ready`: when element is rendered (also: `resize`, `scroll`)
-    - `click`: on mouseclick (also: `dblclick`, `hover`, `mouseenter`, `mouseleave`)
-    - `keypress`: printing key pressed (also: `keydown` all keys, `keyup`)
-    - `focus`: element is focused (opposite: `blur`)
-    - `change`: on form change (also: `submit`)
+    - `element.off('handler');`: deletes an event handler
+    - `element.click(...)` --> deprecated use: `element.trigger()` und `element.on()`
+        - `ready`: when element is rendered (also: `resize`, `scroll`)
+        - `click`: on mouseclick (also: `dblclick`, `hover`, `mouseenter`, `mouseleave`)
+        - `keypress`: printing key pressed (also: `keydown` all keys, `keyup`)
+        - `focus`: element is focused (opposite: `blur`)
+        - `change`: on form change (also: `submit`)
 
 ### DOM manipulation
 - all actions performed on selected elements
