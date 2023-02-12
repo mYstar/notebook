@@ -16,3 +16,5 @@
 - research ajax
 
 - webpack
+
+- babel
