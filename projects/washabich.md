@@ -14,3 +14,9 @@
 - dev.washabich.de
 - demo.washabich.de
 - beta.washabich.de
+
+# Admin Menu in Testinstanz freischalten
+- *templates/intern/header.php* -> ruft: `AuthController::berechtigt('administration')`
+- php -> DB: `$row['admin'] == 'ja'`
+- DB: `gruppe_benutzer` Tabelle abgefragt
+    - ich bin benutzer: 4786

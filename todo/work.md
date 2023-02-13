@@ -10,6 +10,7 @@
     - nach dem Update wieder fragen
 
 - washabich docker
+- Firefox: developer Plugin --> js cache reload
 
 ## learn
 
@@ -18,3 +19,5 @@
 - webpack
 
 - babel
+
+- alpine
