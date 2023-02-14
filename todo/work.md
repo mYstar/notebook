@@ -14,9 +14,9 @@
 
 ## learn
 
-- research ajax
-
 - webpack
+
+- vs code: refactoring
 
 - babel
 
