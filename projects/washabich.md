@@ -20,3 +20,14 @@
 - php -> DB: `$row['admin'] == 'ja'`
 - DB: `gruppe_benutzer` Tabelle abgefragt
     - ich bin benutzer: 4786
+
+# Box Tabs 
+## kompletter Content geladen
+- class: `BoxTabs`
+1. `$boxTabs = BoxTabs::create()`
+2. `->addTab(BoxTab::create(id, title, html));`
+3. `$boxTabs->createHtml(activeTabId)`
+
+## reload on click
+- see: `TeamInternController->createBenutzerPage()`
+
