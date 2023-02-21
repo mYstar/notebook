@@ -1,0 +1,1 @@
+- `CREATE USER name IDENTIFIED BY 'password';`

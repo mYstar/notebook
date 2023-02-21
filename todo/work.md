@@ -2,8 +2,6 @@
 
 ## install
 
-- install exa
-
 - vim config for root
 
 - Markus: login: Impact Loft
@@ -15,6 +13,8 @@
 ## learn
 
 - webpack
+
+- prince
 
 - vs code: refactoring
 

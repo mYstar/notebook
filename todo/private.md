@@ -2,6 +2,8 @@
 
 - neue Handyhülle
 
+- gls: check überweisung Simon/Resi
+
 # learn
 
 - Pragmatic Programmer -- Andrew Hunt

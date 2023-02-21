@@ -1,0 +1,42 @@
+# TODO
+- OK tabs weg: Warteliste, Piwik, Team, Aufträge
+    - routes müssen nicht angepasst werden
+    - .js deteien gelöscht
+    - StatController: funktionen entfernt, aus perform() entfernt
+- OK nicht mehr alles ausgewählt
+    - StatController.auswertungShowSelectionForm(): selected="selected" entfernt
+- [ ] optik anpassen
+    - css classes: `box-tabs__header box-tabs__header--big box-tabs__header--active` + `box-tabs__tab`
+    - nochmal neu, jeden Tab einzeln laden
+    - ? `@import 'components/split-section';`
+    - *css/intern/components/_table-intern.scss*
+    - ! OK css klassen statt mixin verwenden
+    - OK abbrecher -> tableIntern
+    - [ ] auswertung:Table -> ansgar fragen
+- OK back button für Auswertungen (Graph und Tabelle)
+- [ ] refactor: + StatController->calculateHash()
+- OK db fehler ausgeben
+    - error: *Zeitaufwand Kunden-Übersetzer [h]*
+- OK Header korrigieren
+- OK remove: StatController L: 672 `return $content;`
+
+# Fragen 
+
+- !? potentieller bug: `View->__set()` nutzt kein: `str_replace('-', '', $name)`
+- ? `ErrorHandler->handleError()`: l.79f nötig --> dupliziert nur Fehlermeldung
+- ? *index.php*: `define('DEBUG_OUTS', TRUE);` in config auslagern
+- ? js-legacy-chart -> TeamStatisticService.php bleibt?
+- ? switch statement in view: *mailings-list.php* nötig?
+
+# Infos
+
+- route: /intern/stat
+
+- StatController->StatisticService: holt alle Daten aus der DB
+    - wird an js übergeben `class="js-stat-auswertungen-chart"`
+    - per: `data-series="' . htmlspecialchars(json_encode($data))`
+    - -> `$data` wird nicht in einem parsebaren Format gespeichert (datasets sind strings)  
+- stat-auswertungen-chart.js:
+    - instanziiert `ein Highcharts.chart()` übergibt die Attribute aus dem `<div>`
+    - ??? passen die Imports?
+    - ??? 7: Regex richtig? `\ n`
