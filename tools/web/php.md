@@ -14,6 +14,44 @@
     - `$GLOBALS['var']`: zugriff auf alle globalen Variablen via Array
 - `const VAR`: makes VAR a constant in global or class context
 
+## 8.0
+- named arguments: `fname(argname: argument)`
+- attributes instead of JavaDoc `#[namespace\attribute, attr2(arg)]` --> Reflection API can read
+- constructor property promotion: `__construct(public|readonly arg)` --> creates getter/setter
+    - `readonly` since 8.1
+- union types: `int|float $number`
+- match statt switch: 
+```
+$res = match($var) {
+    0 => 'zero',
+    1 => 'one',
+};
+```
+- nullsafe Operator: `$res = $db?->$conn?->query()?;`
+## 8.1
+- enums:
+```
+enum Status {
+    case Wip;
+    case Ready;
+}
+function acceptStatus(Status $s) {}
+```
+- functions are first class objects
+- Objects as default parameter, static var or global constant `__construct(Logger $log = new BaseLogger()) {}`
+- intersection Types `function fname(Iterator&Countable $values) {}`
+- never Return type: `function app() :never {}`
+- final class constants: cannot be overwritten by child
+- octal notation: `0o16`
+- fibers: very lightweight threads
+- array unpacking for string keyed arrays: `$newarr = [...$oldarr, ...$newvalues];`
+
+## 8.2
+- readonly classes
+- DNF Types (disjunctive normal form): `function test((A&B)|null $arg) {}`
+- false true and null as return types: `function test() :false {}`
+- constants in traits
+
 # functions
 - `str_pad()`: pads string to a given length
 - `extract(array)`: creates a variable for every element in the array

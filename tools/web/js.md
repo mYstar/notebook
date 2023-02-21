@@ -1,5 +1,26 @@
 # functions
 - match in array: `['a', 'b', 'c'].includes('b')`
+- keine native traits/mixins
+    - workaround: 
+```
+// trait
+export default {
+    function1() {...},
+    function2() {...},
+}
+
+// class
+import traitname from 'path'
+
+class ClassName { ... }
+
+Object.assign(ClassName.prototype, traitname);
+```
+- template literals: 
+```
+`start ${variable} end`
+```
+
 ## DOM
 
 - forms have an reset Event: `$('form').reset()`
