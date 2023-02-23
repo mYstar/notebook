@@ -63,4 +63,4 @@ function acceptStatus(Status $s) {}
 - `htmlspecialchars()`: encodes characters for display on website
 - `trigger_error()`: display error message
     - whi: error level ab `E_USER_WARNING` zeigen den Fehler an, default `E_USER_NOTICE` nicht
-
+- `json_encode($var)`: encodes $var content as json string 
