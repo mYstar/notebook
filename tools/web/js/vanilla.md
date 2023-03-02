@@ -1,3 +1,17 @@
+# Language constructs
+
+- **Mixins:** 
+    - this is a workaround to have mixin functionality
+```
+let mixinName = {
+    func1() {};
+    func2() {};
+}
+class toExtend {};
+
+Object.assign(toExtend.prototype, mixinName);
+```
+
 # functions
 - match in array: `['a', 'b', 'c'].includes('b')`
 - keine native traits/mixins

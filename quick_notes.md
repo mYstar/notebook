@@ -1,3 +1,7 @@
+# TODO
+
+- ![ ] HDMI im Konferenzraum testen
+
 # IT-1022
 - `baustein-code__value` ist bei gleichem `__label` jedes Jahr verschieden
 - baustein ID: `.form-group>input[name="id"][value]`
@@ -51,11 +55,32 @@
     - [X] `baustein-code--temp-del` nicht transferieren
 - [X] bug: observer not checking grandchildren...?
 - [X] bug: observer counting non final codes
-- [ ] Refactor: 
-    - `ajaxGetDataCode()` in eigenen `DataCodeControllerAjax`?
-    - `DataCodeControllerAjax.perform()` --> alle routes per `$action` auswählen
-    - `Object.assign(CodeSelectorPlugin.prototype, codeAdd);` rückgängig machen
-    - code duplication: `$_GET['newCode']` und `getCodesForYears()`
-    - DataCodeControllerAjax: `isset($_GET['years']) && isset($_GET['codes']) && isset($_GET['bausteinId'])` --> function
-    - `CodeTransfer.transferCodesToOtherYears(): yearsToChange` --> member variable?
+- [X] Refactor: 
+    - [X] `ajaxGetDataCode()` in eigenen `code/data.js`?
+    - [X] `DataCodeControllerAjax.perform()` --> alle routes per `$action` auswählen
+        - [X] searchString
+        - [X] clearYear/codesToDelete
+        - [X] codeToDelete
+        - [X] newCode
+        - [X] codeToUndelete
+    - [X] `Object.assign(CodeSelectorPlugin.prototype, codeAdd);` rückgängig machen
+    - [X] DatCodeControllerAjax: `isset($_GET['years']) && isset($_GET['codes']) && isset($_GET['bausteinId'])` --> function
+    - [X] `CodeTransfer.transferCodesToOtherYears(): yearsToChange` --> member variable?
     - [X] getClearButtonHtml: css-class --hidden
+- [X] Icons statt Beschreibung der Buttons
+- [X] Kommentare
+- [X] pull request
+
+# php
+- ellipsis: `function fname(...args){}`
+
+# js
+- `object.fn` alias for `object.prototype`
+
+# IT-961
+- blacklist: codes die nicht in Patientenbrief angezeigt werden
+    - Sterncodes: können als Sekundärcodes dazucodiert werden
+- BlacklistService.getByUniqueKey
+- in Baustein Vorschau: (VorschauController)
+- Ansicht: strikethrough, ausgegraut
+- ?idee: blacklist codes umsortieren

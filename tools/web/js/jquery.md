@@ -58,7 +58,7 @@
 - `wrap()`: new tag around the element
 - destructive: `remove()` `empty()` `unwrap()`
 - traversing:
-    - `parent()`: selects direct parent (also: `parents()` `parentsUntil()`)
+    - `parent()`: selects direct parent (also: `closest('selector')`, `parents()` `parentsUntil()`)
     - `children()`: selects all direct children
     - `find(selector)`: selects all descendants of the element
     - `siblings()`

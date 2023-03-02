@@ -9,16 +9,22 @@ module.exports = {
   <config>
 };
 ```
-- **entry** point:
-    - start for internal dependency graph
-    - which other modules are needed to run the entry point
-    - default: *src/index.js*
-    - config: `entry: './path/to/my/entry/file.js',`
-- **output**:
-    - where shall the bundles be created
-    - default: `./dist/main.js`
-    - important: `publicPath: '',` sets where to search assets relative to HTML page (here: same directory)
-    - config:
+# **entry** point:
+- start for internal dependency graph
+- which other modules are needed to run the entry point
+- default: *src/index.js*
+- config: `entry: './path/to/my/entry/file.js',`
+- multiple entrypoints --> multiple *bundle.js* files 
+    - `entry: { bundlename: './src/module.js', ...}`
+    - `output: { filename: '[name].bundle.js'}`: name represents `bundlename`
+    - see: #Plugins: HtmlWebpackPlugin
+
+# **output**:
+- where shall the bundles be created
+- default: `./dist/main.js`
+- important: `publicPath: '',` sets where to search assets relative to HTML page (here: same directory)
+- start with clean *dist* folder: `clean: true,`
+- config:
 ```
 output: {
     path: path.resolve(__dirname, 'dist'),
@@ -27,21 +33,21 @@ output: {
 ```
 
 - `path()` is from: `const path = require('path');` node module
-- **loaders**
-    - initial support: .js, .json
-    - 2 properties: `test`, `use`
-    - `test`: which files to load
-    - `use`: which module should transform the file
-    - multiple loaders possible, order in `use` config matters
-    - config:
+# **loaders**
+- initial support: .js, .json
+- 2 properties: `test`, `use`
+- `test`: which files to load
+- `use`: which module should transform the file
+- multiple loaders possible, order in `use` config matters
+- config:
 ```
 module: {
     rules: [{ test: /\.txt$/, use: 'raw-loader' }],
   },
 ```
-- **plugins**
-    - used for other tasks than what loaders do
-    - config:
+# **plugins**
+- used for other tasks than what loaders do
+- config:
 ```
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack'); //to access built-in plugins
@@ -50,6 +56,10 @@ const webpack = require('webpack'); //to access built-in plugins
 
     plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
 ```
-- **mode**
-    - enable built in optimizations
-    - config: `mode: 'production'|'development',`
+
+## HtmlWebpackPlugin
+- used to bind all *[name].bundle.js* files into the *index.html*
+
+# **mode**
+- enable built in optimizations
+- config: `mode: 'production'|'development',`
