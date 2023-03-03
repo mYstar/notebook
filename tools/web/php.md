@@ -2,7 +2,6 @@
 - `obj1 = clone obj2;`: makes a deep copy
 - `array[] = value` fügt value hinten an
 - `list($var1, $var2) = $array`: unpacks `$array` into the vars
-
 - alternative Syntax: Templating
 ```
 <?=$value>
@@ -13,6 +12,10 @@
     - kann auch eine noch nicht definierte Variable sein (Zuweisung definiert sie)
     - `$GLOBALS['var']`: zugriff auf alle globalen Variablen via Array
 - `const VAR`: makes VAR a constant in global or class context
+- anonymous functions:
+    - closure: `function(args) {}`
+    - arrow-function: `fn(args) => <statement>`
+- ellipsis: `function fname(...args){}`
 
 ## 8.0
 - named arguments: `fname(argname: argument)`

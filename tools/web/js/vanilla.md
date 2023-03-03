@@ -1,5 +1,6 @@
 # Language constructs
 
+- `object.fn` alias for `object.prototype`
 - **Mixins:** 
     - this is a workaround to have mixin functionality
 ```
