@@ -67,3 +67,4 @@ function acceptStatus(Status $s) {}
 - `trigger_error()`: display error message
     - whi: error level ab `E_USER_WARNING` zeigen den Fehler an, default `E_USER_NOTICE` nicht
 - `json_encode($var)`: encodes $var content as json string 
+- `header('Location: ' . $url)`: sends a raw http header (here: to redirect to `$url`)
