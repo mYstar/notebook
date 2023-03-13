@@ -1,1 +1,7 @@
 - `CREATE USER name IDENTIFIED BY 'password';`
+- `DATE()`: get date from date_time
+- `MONTH()`, `YEAR()`, ...: get element number from date
+- `MONTHNAME()`, ...: get element string from date
+- `WITH substatement AS alias (...)`
+- `GROUP_CONCAT(field SEPARATOR ', ')`: creates a list of the values of `GROUP BY`
+- `BETWEEN min AND max`: `WHERE` clause (also works for dates)

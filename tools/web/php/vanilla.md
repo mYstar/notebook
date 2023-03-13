@@ -68,3 +68,14 @@ function acceptStatus(Status $s) {}
     - whi: error level ab `E_USER_WARNING` zeigen den Fehler an, default `E_USER_NOTICE` nicht
 - `json_encode($var)`: encodes $var content as json string 
 - `header('Location: ' . $url)`: sends a raw http header (here: to redirect to `$url`)
+- `array_reduce($array, callback, startvalue)`
+    - callback: `function($carry, $cur_item)`
+- `array_merge(...$array)`: flattens the array by 1 dimension
+- `array_walk()` `array_walk_recursive()`: go through all array (and all subarrays) elements in order
+
+## dates
+- use: `DateTimeInterface`, `DateTimeImmutable`, `DateTime`
+- `date->format('Y-m-d H:i:s')`: string formatieren (auch um Teile zu extrahieren)
+- `DateInterval('P1M')`: definiert Zeitintervall (hier 1 Monat)
+- `DatePeriod($startDate, $interval, $endDate)`: Iterator im Zeitintervall
+
