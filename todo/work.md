@@ -8,12 +8,10 @@
 
 ## learn
 
-- webpack
-
-- vs code: refactoring
-
 - babel
 
 - prince
 
 - alpine
+
+- lodash

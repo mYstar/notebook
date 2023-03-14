@@ -40,6 +40,7 @@ enum Status {
 }
 function acceptStatus(Status $s) {}
 ```
+- loop over enum: `foreach(Status::cases() as status) {}`
 - functions are first class objects
 - Objects as default parameter, static var or global constant `__construct(Logger $log = new BaseLogger()) {}`
 - intersection Types `function fname(Iterator&Countable $values) {}`
