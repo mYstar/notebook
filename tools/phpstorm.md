@@ -1,9 +1,41 @@
 # Shortcuts
-- **CRTL + Space**: intellisense
+
+## Editing
+- **STRG + Space**: intellisense
 - **ALT + Enter**: show hint
-- **CRTL + w**: extend selection
+- **STRG + w**: extend selection
 - **ALT + SHIFT + Mouse**: block select
 - **ALT + Mouse**: multiple cursors
-- **CRLT + SHIFT + up/down**: move line
+- **STRG + SHIFT + up/down**: move line
+- **STRG + ALT + T**: surround
+  - **STRG + ALT + J**: surround with template
+- **F2**: next error
+
+## refactoring
+- **SHIFT + STRG + ALT + t**: dialog
+- **SHIFT + F6**: change name
+- **STRG + F6**: change signature
+- Project: **F5**: copy file
+
+## UI
+- **SHIFT + Esc**: close all open toolbars
+- **ALT + F12**: launch terminal
+
+## Search
+- **Shift Shift**: global search
+- **STRG + F**: in file search
+  - **STRG + R**: toggle replace
+  - **Esc**: close search
+- **F3**/**SHIFT + F3**: next/previous search hit
+
+## Debugging
+- **STRG + F8**: set breakpoint
+  - also: klick in gutter
+  - **SHIFT + gutter-klick**: conditional breakpoint
+- **F7**: step into
+- **SHIFT + F7**: smart step into
+- **F8**: step over
+- **SHIFT + F8**: step out
+- **F9**: continue
 
 # Tools

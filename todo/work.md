@@ -12,6 +12,8 @@
 
 - prince
 
+- ansible
+
 - alpine
 
 - lodash

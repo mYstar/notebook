@@ -7,3 +7,4 @@
 # learn
 
 - Pragmatic Programmer -- Andrew Hunt
+- relational DB book
