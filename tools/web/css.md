@@ -1,3 +1,5 @@
+- `content:url("image.jpg")`: change image
+
 # naming convention BEM
 - block = standalone entity --> `list`
 - element = part of an entity --> `list__item`

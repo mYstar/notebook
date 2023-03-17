@@ -73,6 +73,7 @@ function acceptStatus(Status $s) {}
     - callback: `function($carry, $cur_item)`
 - `array_merge(...$array)`: flattens the array by 1 dimension
 - `array_walk()` `array_walk_recursive()`: go through all array (and all subarrays) elements in order
+- `array_key_first()`, `array_key_last()`: determine start/end of `foreach` loop
 
 ## dates
 - use: `DateTimeInterface`, `DateTimeImmutable`, `DateTime`

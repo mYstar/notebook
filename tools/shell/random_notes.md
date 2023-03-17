@@ -1,4 +1,6 @@
 # Shell (zsh) stuff
+- `ln -s full_path_name link_full_path`
+- `groups username`: lists all groups a user is in
 
 ## systemd
 
