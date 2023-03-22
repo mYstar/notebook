@@ -1,0 +1,7 @@
+- PBA Parser optimieren (weniger Durchläufe)
+    - mehrere Stellen die Infos aus Text extrahieren (Fehlermeldungen, *Codes, ...)
+    - Performance nur in großen OPS Bausteinen problematisch
+- wartende Features: Mengen, Zeilenangabe, Merge bei Seitigkeit nicht relevant
+- testing: es gibt eine Benutzeroberfläche für den Vergleich
+- ich im code Review
+- Infobausteine: kleine wiederverwendbarer Textschnipsel

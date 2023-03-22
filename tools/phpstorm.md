@@ -7,8 +7,8 @@
 - **ALT + SHIFT + Mouse**: block select
 - **ALT + Mouse**: multiple cursors
 - **STRG + SHIFT + up/down**: move line
-- **STRG + ALT + T**: surround
-  - **STRG + ALT + J**: surround with template
+- **STRG + ALT + t**: surround
+  - **STRG + ALT + j**: surround with template
 - **F2**: next error
 
 ## refactoring
@@ -20,11 +20,12 @@
 ## UI
 - **SHIFT + Esc**: close all open toolbars
 - **ALT + F12**: launch terminal
+- **STRG + SHIFT + i**: preview of definition
 
 ## Search
 - **Shift Shift**: global search
-- **STRG + F**: in file search
-  - **STRG + R**: toggle replace
+- **STRG + f**: in file search
+  - **STRG + r**: toggle replace
   - **Esc**: close search
 - **F3**/**SHIFT + F3**: next/previous search hit
 
