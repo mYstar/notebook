@@ -72,8 +72,11 @@ function acceptStatus(Status $s) {}
 - `array_reduce($array, callback, startvalue)`
     - callback: `function($carry, $cur_item)`
 - `array_merge(...$array)`: flattens the array by 1 dimension
+  - also can be used to append single arrays
 - `array_walk()` `array_walk_recursive()`: go through all array (and all subarrays) elements in order
 - `array_key_first()`, `array_key_last()`: determine start/end of `foreach` loop
+- `pack()` `unpack()`: convert data to binary representation
+  - strings are a binary representation (`pack` can be used to add numbers etc. to that representation)
 
 ## dates
 - use: `DateTimeInterface`, `DateTimeImmutable`, `DateTime`
