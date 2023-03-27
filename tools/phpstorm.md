@@ -10,6 +10,7 @@
 - **STRG + ALT + t**: surround
   - **STRG + ALT + j**: surround with template
 - **F2**: next error
+- postfix completion: `<condition>.if`
 
 ## refactoring
 - **SHIFT + STRG + ALT + t**: dialog

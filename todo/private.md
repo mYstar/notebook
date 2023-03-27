@@ -7,4 +7,5 @@
 # learn
 
 - Pragmatic Programmer -- Andrew Hunt
-- relational DB book
+- book on test driven development
+- book on relational DB

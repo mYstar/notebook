@@ -16,6 +16,10 @@
     - closure: `function(args) {}`
     - arrow-function: `fn(args) => <statement>`
 - ellipsis: `function fname(...args){}`
+- interfaces
+  - defined like class (only method stubs)
+  - has to be autoloaded/required to work
+  - usage: `class className implements interfaceName`
 
 ## 8.0
 - named arguments: `fname(argname: argument)`
@@ -30,6 +34,10 @@ $res = match($var) {
     1 => 'one',
 };
 ```
+- Custom PHP 8 Attributes:
+  - `#[NoReturn]`
+  - `#[ArrayShape]`
+  - phpstorm provides an implementation
 - nullsafe Operator: `$res = $db?->$conn?->query()?;`
 ## 8.1
 - enums:
