@@ -1,21 +1,19 @@
 # diary
-- pba datawarehouse:
-  - insert data rows into db 2h --> 2h
-    - i: `db->quote()` checks for integer
-    - check for sql errors
-  - repair routing 0,5h -> 1h
-  - refactor 1h++ -> 2h
-    - i: null can be multiple times in a unique key in mariadb/mysql
-  - bugfix: code duplicates -> 3,5h
+- meetings
+  - 10:00 review: statistics, ngp upload 30' ok
+  - 13:00 planning: ngp upload ready, rest interface 1h ok
+- ngp upload:
+  - resolve duplication 2h ok
+  - refactoring 2h -> 4h
 
 # TODO
 - [ ] Markus: whi-db
   - [ ] `DbConnection->entryFromSql()` auch als `queryBuilder` Variante? 
   - [ ] query builder: `DbConnector` in constructor -> damit `quote()` von argumenten möglich
-- [ ] Datenupload NGP ready: new branch: DataWarehouse for pull-request
-  - [X] new Epic
-  - [ ] new Branch: datawarehouse
-  - [ ] create pull request
+- [ ] code formatter `{` on same line as return type for multiline arguments
+- [ ] whi-router: patientenbriefe.de
+- [ ] triaphon
+- [ ] seatable.washabich.de, login?
 
 # IT-1083
 - [X] create route: data-warehouse
@@ -35,30 +33,46 @@
   - [X] break if datasource already there
   - [X] else insert new datasource
   - [X] insert data
-- [ ] bug: different spelled versions of codes in .csv-file
+- [X] bug: different spelled versions of codes in .csv-file
   - sum count of same codes 
   - [X] don't build `SourceData` and `HealthCodeRequestIcd` Objects in `NgpCsvReaderService`
+  - [X] merge duplicates
+  - [X] refactor: upload objects
+    - [X] `HealthCodeRequestIcd`: strings to lower
+    - [X] NgpReaderService: Create Request objects
+    - [X] `HealthCodeRequestService->updateDb()`: 
+      1. remove duplicates
+      2. Rest
+- [ ] UI: Auswahl von codeYear, codeSystem, start-enddate
+  - [ ] data_source == NGP
+  - [ ] random generate hash value of `data_source`
+  - [ ] select icd/ops upload
+- [ ] DB: time reference for values? --> new column start, end
+- [ ] data upload just inserts and does not update any counters
+  - collisions of requests are overwritten
+- [ ] seed from current ngp data
+- [ ] Datenupload NGP ready: new branch: DataWarehouse for pull-request
+  - [X] new Epic
+  - [ ] beautify
+  - [ ] code inspections
+  - [ ] new Branch: datawarehouse
+  - [ ] create pull request
 
 - refactor:
   - [X] german error messages
   - [X] use `static::ALLOWED_FILETYPES` in template
   - [X] db Services -> Service/Db
   - [X] new class for insert row (also: tablename, column names)
-  - [ ] `const` for all instances of table column names
+  - [X] `const` for all instances of table column names
+  - [X] `SourceData` -> `RequestSourceData`
+  - [X] `HealthCodeReportIcd` abgeleitet `abstract HealthCodeReport`
+  - [X] `HealthCodeRequestsIcd` abgeleitet `abstract HealthCodeRequests`
+  - [X] neuer Name: `ReportData` (vs `DataSource`)
 
 ## topics
-- [ ] preview before upload?
-- [ ] how to calculate hash value of `data_source`
-  - now: sha256 of filename
-- [ ] check pba database for valid codes?
-- [ ] check for `HealthCodeRequestIcd` field length beforehand? -> possibly trim 
-- [ ] data upload just inserts and does not update any counters
-  - because a new data-source is created every time
-- [ ] time reference for values? (only `code_year` for now)
-  - typically a datawarehouse stores a timestamp for every item
-
-## nicht Implementierte Features
 - [ ] limit access to admin?
-- [ ] progress bar bei upload https://www.php.net/manual/de/session.upload-progress.php
-- [ ] Upload mehrerer Dateien gleichzeitig
-- [ ] ignore csv comments (nonstandard)
+- [ ] Upload multiple files
+
+# IT-1110
+- HELIOS Fallbezogene Daten:
+  - insomnia REST recherchieren

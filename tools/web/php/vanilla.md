@@ -20,6 +20,8 @@
   - defined like class (only method stubs)
   - has to be autoloaded/required to work
   - usage: `class className implements interfaceName`
+- `$newObj = clone $obj`: shallow copy of object
+  - overwrite `__clone()` for deep copy
 
 ## 8.0
 - named arguments: `fname(argname: argument)`
