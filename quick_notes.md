@@ -1,19 +1,17 @@
 # diary
-- meetings
-  - 10:00 review: statistics, ngp upload 30' ok
-  - 13:00 planning: ngp upload ready, rest interface 1h ok
-- ngp upload:
-  - resolve duplication 2h ok
-  - refactoring 2h -> 4h
+- data-warehouse: 
+  - meetings und planung 1h
+  - Eingabemaske +Code System +Katalog Jahr +Zeitraum +Datenquelle 3h++
+  - prettier phpstorm 0,5h
 
 # TODO
 - [ ] Markus: whi-db
   - [ ] `DbConnection->entryFromSql()` auch als `queryBuilder` Variante? 
   - [ ] query builder: `DbConnector` in constructor -> damit `quote()` von argumenten möglich
+  - [ ] `InsertQuery`: `ON DUPLICATE KEY UPDATE` funktion
 - [ ] code formatter `{` on same line as return type for multiline arguments
 - [ ] whi-router: patientenbriefe.de
 - [ ] triaphon
-- [ ] seatable.washabich.de, login?
 
 # IT-1083
 - [X] create route: data-warehouse
@@ -43,14 +41,37 @@
     - [X] `HealthCodeRequestService->updateDb()`: 
       1. remove duplicates
       2. Rest
-- [ ] UI: Auswahl von codeYear, codeSystem, start-enddate
-  - [ ] data_source == NGP
-  - [ ] random generate hash value of `data_source`
-  - [ ] select icd/ops upload
-- [ ] DB: time reference for values? --> new column start, end
-- [ ] data upload just inserts and does not update any counters
+- [X] UI: Auswahl von codeYear, codeSystem, start-enddate
+  - [X] select: data_source == NGP
+  - [X] select icd/ops upload
+  - [X] input codeYear
+  - [X] store all form values as metadata
+  - [X] select reader from source
+  - [X] use catalog year input
+  - [X] new start/end date column in table
+  - [X] dont enforce new data_source every time
+  - [X] use form start/end date in reader/db insert
+  - [X] select db writer from code System
+  - [X] generate hash value of `data_source`
+  - [X] new ngp ops reader (Bezeichnung mit /)
+  - [X] new `health_code_requests_ops` migration
+  - [X] format form look
+- [X] refactor:
+  - [X] `DataWarehouseController` make most constants private
+  - [X] `data_warehouse.php` View: use `DataWarehouseController` constants instead of parameters
+  - [X] `DataWarehouseController` new function `showForm()` for default action
+  - [X] new abstract class `HealthCodeRequests`: member `getDataKeys()`
+  - [X] introduce: 'ICD' and 'OPS' constants
+  - [X] determine Report Type via match
+  - [X] create `Util/CsvReader` from `ReaderCsvNgpService`
+    - Report constructor takes array and builds Requests on his own
+- [X] data upload just inserts and does not update any counters
   - collisions of requests are overwritten
-- [ ] seed from current ngp data
+- [ ] upload current NGP Data
+  - [X] shellscript for .csv conversion
+  - [X] implement: ignore not readable rows
+  - [ ] manual upload
+- [ ] seed from current quarter ngp data
 - [ ] Datenupload NGP ready: new branch: DataWarehouse for pull-request
   - [X] new Epic
   - [ ] beautify
@@ -70,9 +91,23 @@
   - [X] neuer Name: `ReportData` (vs `DataSource`)
 
 ## topics
-- [ ] limit access to admin?
-- [ ] Upload multiple files
+- ![ ] many non ICD, OPS codes in the tables (e.g. 46874, de, /icd-code-sucheI71-9, Gesamt / Mittel)
+- neuer menupunkt bei login namen
+- [ ] `data_source` table: unique name
+  - +random hash
+- [ ] how to detect collisions for health_code_requests in timespan
+  - monatsweise
+    - no easy solution for overlapping timespan
 
 # IT-1110
 - HELIOS Fallbezogene Daten:
   - insomnia REST recherchieren
+
+# php
+- regex: 
+  - `\w` word char = [0-9a-zA-Z_]
+  - `\W` non word char
+  - `\d` digit
+
+# sql
+- `ON DUPLICATE KEY UPDATE colA=VALUES(colA)`: overwrite instead of update

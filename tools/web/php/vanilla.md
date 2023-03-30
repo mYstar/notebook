@@ -87,8 +87,10 @@ function acceptStatus(Status $s) {}
 - `array_key_first()`, `array_key_last()`: determine start/end of `foreach` loop
 - `pack()` `unpack()`: convert data to binary representation
   - strings are a binary representation (`pack` can be used to add numbers etc. to that representation)
+- `file_put_contents()`, `file_get_contents()`: reading/writing whole files
 
 ## dates
+- `date('Y-m-d')`: formats a string from current date
 - use: `DateTimeInterface`, `DateTimeImmutable`, `DateTime`
 - `date->format('Y-m-d H:i:s')`: string formatieren (auch um Teile zu extrahieren)
 - `DateInterval('P1M')`: definiert Zeitintervall (hier 1 Monat)
