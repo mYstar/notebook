@@ -5,3 +5,5 @@
 - `WITH substatement AS alias (...)`
 - `GROUP_CONCAT(field SEPARATOR ', ')`: creates a list of the values of `GROUP BY`
 - `BETWEEN min AND max`: `WHERE` clause (also works for dates)
+- `INSERT INTO table VALUES (...)`
+  - `ON DUPLICATE KEY UPDATE colA=VALUES(colA)`: overwrite instead of update

@@ -7,5 +7,5 @@
 # learn
 
 - Pragmatic Programmer -- Andrew Hunt
-- book on test driven development
+- https://leanpub.com/4rulesofsimpledesign
 - book on relational DB

@@ -11,6 +11,7 @@
   - **STRG + ALT + j**: surround with template
 - **F2**: next error
 - postfix completion: `<condition>.if`
+- **STRG + D**: duplicate line/selection
 
 ## refactoring
 - **SHIFT + STRG + ALT + t**: dialog
