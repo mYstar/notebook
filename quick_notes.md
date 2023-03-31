@@ -1,11 +1,15 @@
 # diary
+- data-warehouse: 
+  - datum monatsweise 2h -> 1,5h
+  - seed erstellen 2h -> 45'
+  - pull request 2h 
+- pba-parser: review 2h
 
 # TODO
 - [ ]Markus: whi-db
   - [ ]`DbConnection->entryFromSql()` auch als `queryBuilder` Variante? 
   - [ ]query builder: `DbConnector` in constructor -> damit `quote()` von argumenten möglich
   - [ ]`InsertQuery`: `ON DUPLICATE KEY UPDATE` funktion
-- [ ]code formatter `{` on same line as return type for multiline arguments
 - [ ]whi-router: patientenbriefe.de
 - [ ]triaphon
 
@@ -70,15 +74,15 @@
 - [X]neuer menupunkt bei login namen
 - [X]`data_source` table: unique name
   - [X]random hash
-- [ ]how to detect collisions for health_code_requests in timespan
+- [X]how to detect collisions for health_code_requests in timespan
   - monthwise
   - no easy solution for overlapping timespan
-- [ ]seed from current quarter ngp data
-  - [ ]manual upload
+- [X]seed from current quarter ngp data
+  - [X]manual upload
 - [ ]Datenupload NGP ready: new branch: DataWarehouse for pull-request
   - [X]new Epic
-  - [ ]beautify
-  - [ ]code inspections
+  - [X]beautify
+  - [X]code inspections
   - [ ]new Branch: datawarehouse
   - [ ]create pull request
 
@@ -98,3 +102,10 @@
 # IT-1110
 - HELIOS Fallbezogene Daten:
   - insomnia REST recherchieren
+
+# SQL
+- `TRUNCATE TABLE table_name`: deletes the content of a table
+
+# php
+- `strtotime($time, 'Y-m-d')`: generates a Unix timestamp
+- `(string|int)[]`: array in phpdoc
