@@ -7,3 +7,4 @@
 - `BETWEEN min AND max`: `WHERE` clause (also works for dates)
 - `INSERT INTO table VALUES (...)`
   - `ON DUPLICATE KEY UPDATE colA=VALUES(colA)`: overwrite instead of update
+- `TRUNCATE TABLE table_name`: deletes the content of a table

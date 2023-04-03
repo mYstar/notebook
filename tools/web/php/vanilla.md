@@ -22,6 +22,7 @@
   - usage: `class className implements interfaceName`
 - `$newObj = clone $obj`: shallow copy of object
   - overwrite `__clone()` for deep copy
+- `(string|int)[]`: array in phpdoc
 
 ## 8.0
 - named arguments: `fname(argname: argument)`
@@ -89,6 +90,8 @@ function acceptStatus(Status $s) {}
   - strings are a binary representation (`pack` can be used to add numbers etc. to that representation)
 - `bin2hex(random_bytes(64/2))`: create random hex number with length 64
 - `file_put_contents()`, `file_get_contents()`: reading/writing whole files
+- `strtotime($time, 'Y-m-d')`: generates a Unix timestamp
+- `strspn`: counts how often a given substring occurs at the start of a given string
 
 ## dates
 - `date('Y-m-d')`: formats a string from current date

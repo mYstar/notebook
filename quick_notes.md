@@ -2,8 +2,10 @@
 - data-warehouse: 
   - datum monatsweise 2h -> 1,5h
   - seed erstellen 2h -> 45'
-  - pull request 2h 
+  - pull request 2h -> 2,5
 - pba-parser: review 2h
+  - [ ]question: When is `AddToCurrentAndStack` needed when `AddToStack`?
+  - [ ]question: Why is Stack Operation as class needed?
 
 # TODO
 - [ ]Markus: whi-db
@@ -79,12 +81,12 @@
   - no easy solution for overlapping timespan
 - [X]seed from current quarter ngp data
   - [X]manual upload
-- [ ]Datenupload NGP ready: new branch: DataWarehouse for pull-request
+- [X]Datenupload NGP ready: new branch: DataWarehouse for pull-request
   - [X]new Epic
   - [X]beautify
   - [X]code inspections
-  - [ ]new Branch: datawarehouse
-  - [ ]create pull request
+  - [X]new Branch: datawarehouse
+  - [X]create pull request
 
 - refactor:
   - [X]german error messages
@@ -102,10 +104,3 @@
 # IT-1110
 - HELIOS Fallbezogene Daten:
   - insomnia REST recherchieren
-
-# SQL
-- `TRUNCATE TABLE table_name`: deletes the content of a table
-
-# php
-- `strtotime($time, 'Y-m-d')`: generates a Unix timestamp
-- `(string|int)[]`: array in phpdoc
