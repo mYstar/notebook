@@ -1,18 +1,19 @@
 # diary
-- orga:
-  - dayplan 30' OK
-  - meetings 2h  OK
-- pba-parser: review 2h OK
-- REST API casewise
-  - planning with template pba 1h
-  - new functions whi router 1,5h
-- learn: babel 30'
-- [X] lernen: Bausteine löschen im Redaktionssystem
-  - Anfrage im pba channel
-
+- orga, planning 0,5h OK
+- whi-db: new features 2h -> 2,5h
+- meeting: how to server 1h -> 1,5h
+- pb-redaktion: bugfix statistics + new codetype estimate 2,5h ++
 
 # TODO
+- [ ]?Markus: Was soll ich mit der Fehlermeldung machen?
+- [ ] in errorhandler Mailliste eintragen lassen
 - [ ]Bugfix: wrong new codes number (change on automatic is counted)
+  - [X]new Branch
+  - [X]filter automatic codes later
+  - [X]distinct ICD and OPS for bargraph
+  - [ ]distinct estimate for ICD and OPS ready time TODO: calculate avg codecount for every code system
+  - [ ]write tests
+  - [ ]test on live db
   - +feature: dual prognose ICD OPS ready
 - [ ]?Markus: Should DataSource Hash be used like a password for the API? (Should be secure, when transmitted over HTTPS)
 - [ ]whi-router: patientenbriefe.de
@@ -34,7 +35,8 @@
 - [ ] whi-db
   - [X]`DbConnection->entryFromSql()` auch als `queryBuilder` Variante? 
   - [X]install testing Library
-  - [ ]query builder: `DbConnector` in constructor -> damit `quote()` von argumenten möglich
+  - xxx query builder: `DbConnector` in constructor -> damit `quote()` von argumenten möglich
     - aufpassen, dass man angeben kann, was gequotet werden soll
-  - [ ]`InsertQuery`: `ON DUPLICATE KEY UPDATE` funktion
+  - [X]`InsertQuery`: `ON DUPLICATE KEY UPDATE` funktion
+  - [X]pull request
   - [ ]new tag for merged pull request

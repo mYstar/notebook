@@ -1,0 +1,7 @@
+- install directory: `/opt/seatable`
+- config: `<install>/conf/seatable_settings.py`
+- `docker exec -d seatable /shared/seatable/scripts/seatable.sh`: admin script
+    - `start|stop|restart`: restart on config change
+- data docker volumes:
+    - `<install>/mysql-data`: DB
+    - `<install>/seatable-data`: seatable (log and config of nginx and seatable)

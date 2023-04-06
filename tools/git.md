@@ -10,3 +10,9 @@
 - `fetch`: updates all local branches to remote (also `update` for single branch)
 - `pull`: integrates changes into working copy (`fetch` + `merge`)
     - `--rebase` setzt eigene Commits an die Spitze von remote HEAD 
+
+## undo
+- `git log`: shows the last commits and their hashes
+- `git revert <hash1> <hash2>`: undoes the last commits in a new commit
+  - `git reset --hard <hash>`: removes the commit with <hash> and all following from the branch (use: `git push --force`)
+  - git reset alters the branch, it should be the last resort, when revert is not possible  

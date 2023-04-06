@@ -23,6 +23,7 @@
 - `$newObj = clone $obj`: shallow copy of object
   - overwrite `__clone()` for deep copy
 - `(string|int)[]`: array in phpdoc
+- return type `self`
 
 ## 8.0
 - named arguments: `fname(argname: argument)`
@@ -84,6 +85,7 @@ function acceptStatus(Status $s) {}
     - callback: `function($carry, $cur_item)`
 - `array_merge(...$array)`: flattens the array by 1 dimension
   - also can be used to append single arrays
+- `array_push(altered_array, ...appended_array);`
 - `array_walk()` `array_walk_recursive()`: go through all array (and all subarrays) elements in order
 - `array_key_first()`, `array_key_last()`: determine start/end of `foreach` loop
 - `pack()` `unpack()`: convert data to binary representation

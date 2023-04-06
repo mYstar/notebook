@@ -1,22 +1,7 @@
 # Shell (zsh) stuff
 - `ln -s full_path_name link_full_path`
 - `groups username`: lists all groups a user is in
-
-## systemd
-
-neuer Standard in der Linux Welt  
-
-```shell
-/etc/init.d/<tool> start
-/etc/init.d/<tool> stop
-# ...
-# -->
-systemctl start <tool>
-systemctl stop <tool>
-systemctl restart <tool>
-systemctl status <tool>
-systemctl is-active <service>
-```
+- `mkpasswd -m SHA-512 <password>`: generate a password string
 
 ## dig
 

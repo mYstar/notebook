@@ -8,3 +8,4 @@
 - `INSERT INTO table VALUES (...)`
   - `ON DUPLICATE KEY UPDATE colA=VALUES(colA)`: overwrite instead of update
 - `TRUNCATE TABLE table_name`: deletes the content of a table
+- `INSERT INTO table SET name = value, name2 = value, name3 = value3;`: other syntax for `INSERT`
