@@ -34,7 +34,7 @@
 ## Debugging
 - **STRG + F8**: set breakpoint
   - also: klick in gutter
-  - **SHIFT + gutter-klick**: conditional breakpoint
+  - **SHIFT + gutter-klick**: conditional or logging breakpoint
 - **F7**: step into
 - **SHIFT + F7**: smart step into
 - **F8**: step over

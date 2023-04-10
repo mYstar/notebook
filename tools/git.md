@@ -14,5 +14,6 @@
 ## undo
 - `git log`: shows the last commits and their hashes
 - `git revert <hash1> <hash2>`: undoes the last commits in a new commit
+  - `-m 1`: reverts a merge (1 stands for the first parent)
   - `git reset --hard <hash>`: removes the commit with <hash> and all following from the branch (use: `git push --force`)
   - git reset alters the branch, it should be the last resort, when revert is not possible  
