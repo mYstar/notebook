@@ -1,10 +1,15 @@
 # diary
-- orga, planning 1h OK
-- pull requests:
-  - rework: whi-db 0,5h OK (merge + tag OK)
-  - review: pba-parser ueberschriften 2h OK
-  - rework: ngp-upload 1,5h 
-- bugfix: wrong new codes 2h -> 1,5h
+- cleaning:
+  - 30' vacuum
+  - 30' mop
+- change ipad battery 2h
+- go running 1,5h
+- programming:
+  - 3h learn seafile
+  - 3h work through book
+- Aggi phonecall
+- Männertag buy ticket
+- shopping list
 
 # TODO
 - [ ]tethering by telephone test

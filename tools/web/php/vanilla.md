@@ -92,6 +92,7 @@ function acceptStatus(Status $s) {}
   - strings are a binary representation (`pack` can be used to add numbers etc. to that representation)
 - `bin2hex(random_bytes(64/2))`: create random hex number with length 64
 - `file_put_contents()`, `file_get_contents()`: reading/writing whole files
+- `RecursiveDirectoryIterator`, `RecursiveIteratorIterator`: combined they can list all files in a directory
 - `strtotime($time, 'Y-m-d')`: generates a Unix timestamp
 - `strspn`: counts how often a given substring occurs at the start of a given string
 
@@ -106,3 +107,5 @@ function acceptStatus(Status $s) {}
   - `\w` word char = [0-9a-zA-Z_]
   - `\W` non word char
   - `\d` digit
+- `preg_match_all()`: alternative to global flag in php regex
+- `preg_replace('/patte(rn)/', 'replacement$1', $input)`: regex replace `$1` is the first match group
