@@ -12,12 +12,26 @@
 
 ## plugins
 - `@babel/plugin-transform-arrow-functions`: transforms arrow to regular functions
+- polyfill use: `import "core-js/stable";`
 
 ## presets
 - `@babel-preset-env`: all ES2015+ to ES5 transformations
 
 # configuration
 - *babel.confing.json* in project root
+  - *.babelrc.json*: only acts on the containing directory
+  - all config files work as `.js` version (`return {json};`)
+  - also config in *package.json* possible
+```json
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "babel": {
+    "presets": [ ... ],
+    "plugins": [ ... ],
+  }
+}
+```
 - example:
 ```json
 {

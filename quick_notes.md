@@ -1,44 +1,69 @@
 # diary
-- cleaning:
-  - 30' vacuum
-  - 30' mop
-- change ipad battery 2h
-- go running 1,5h
-- programming:
-  - 3h learn seafile
-  - 3h work through book
-- Aggi phonecall
-- Männertag buy ticket
-- shopping list
+- orga:
+  - dayplan 1h OK
+  - Urlaub beantragen
+  - review 1h -> 30'
+  - planning 1h -> 45'
+- review: Feature/IT-1096 uberschriften 1h -> 30'
+- finalize bugfix IT-1119 0.5h -> 1h
+- correct pull request: Feature/IT-1083 data warehouse datei upload ngp 2h OK
+  - stricter array declarations, code quality
+  - new whi-db features
+- plan REST interface 0.5h OK
+- bugfix: Anmelden auf Mailingliste ohne valide E-Mail -- 30' OK
+  - [X]fix & commit
+  - [X]deploy (from: origin/feature/IT-591-bilder-im-versionsvergleich-ubersichtlicher-machen)
+- buffer: babel 1.0h  OK
+- Männertag buy ticket (Breungeshain Waldsiedlung, Schotten) OK
 
 # TODO
-- [ ]tethering by telephone test
-- [ ]neue whi-db features in ngp-upload nutzen
-- [ ]?Markus: Was soll ich mit der Fehlermeldung machen?
-- [ ] in errorhandler Mailliste eintragen lassen
-- [ ]Bugfix: wrong new codes number (change on automatic is counted)
+- [X]freier Tag verschoben: 17.05. -> 19.05.
+- [X]Urlaub: von 10.07. -> 04.08. beantragen
+- [X]?Markus: Should DataSource Hash be used like a password for the API? (Should be secure, when transmitted over HTTPS)
+- [X]neue whi-db features in ngp-upload nutzen
+- [X]?Markus: Was soll ich mit der Fehlermeldung machen?
+- [X]in monit Mailliste eintragen lassen
+- [ ]registry zugriff für docker
+- [X]Bugfix: wrong new codes number (change on automatic is counted)
   - [X]new Branch
   - [X]filter automatic codes later
   - [X]distinct ICD and OPS for bargraph
   - [X]remove time estimate
   - [X]test on live db
-  - [ ]Kommentar: nicht ganz exakte Zahl
-  - +feature: dual prognose ICD OPS ready
-- [ ]?Markus: Should DataSource Hash be used like a password for the API? (Should be secure, when transmitted over HTTPS)
+  - [X]Kommentar: nicht ganz exakte Zahl
+  - [X]pull request
 - [ ]whi-router: patientenbriefe.de
 - [ ]triaphon
+- [ ]tethering by telephone test
 
 # IT-1110
 - HELIOS Fallbezogene Daten:
   - insomnia REST recherchieren
 - neue Action im Main Controller `$isDataWarehouseApiCall`
-- Hash als Secret verwenden
-- [X]whi-db
-  - [X]`DbConnection->entryFromSql()` auch als `queryBuilder` Variante? 
-  - [X]install testing Library
-  - xxx query builder: `DbConnector` in constructor -> damit `quote()` von argumenten möglich
-    - aufpassen, dass man angeben kann, was gequotet werden soll
-  - [X]`InsertQuery`: `ON DUPLICATE KEY UPDATE` funktion
-  - [X]pull request
-  - [X]new tag for merged pull request
+- [ ]config: test system
+  - [ ]acceptance: upload test file
+  - [ ]unit: TDD from now on
+- [ ] Hash als Secret verwenden
+  - [ ] einfach als https verschlüsseltes passwort name: hash->secret
+  - [ ] im confluence dokumentieren
+- [ ] new data-source seed for helios
+  - [ ] remove autocreate datasources
+- [ ] new migration: 
+  - [ ] rollback everything and reverse engineer data_warehouse.sql
+  - [ ] create HealthCase classes with column names
+  - [ ] health_case
+  - [ ] health_case_code_icd
+  - [ ] health_case_code_ops
+- [ ] create new api route (PUT)
+- [ ] verify request 
+  - [ ]verify hash secret
+  - [ ]verify data keys and values
+- [ ]build: HealthCase object
+- [ ]build: insert statements (Service)
+- [ ]integration test: send a request, check response, test DB
 
+# composer
+- update git tag and version number in composer.json
+
+# planning
+- Vorbereitung: Backlog Pflege (Schätzungen anpassen)

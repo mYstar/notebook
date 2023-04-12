@@ -1,6 +1,8 @@
 # seatable
+
+## TODO
 - [ ]checkout long-text markdown options
-- [ ]checkout views
+- [X]checkout views
 - prototype write daily documentation to other base (complete Documentation)
     - [ ] design complete documentation
         - 3 tables: Tätigkeiten, Beobachtungen, Anschlussarbeiten
@@ -14,6 +16,8 @@
         - check for changes -> only update changes
           - [ ]idea: make a Admin->Kommandos table with buttons (Neuen Tag anlegen, ...)
 - [ ]use seatable webhooks to be informed about changes
+
+## long term
 - [ ]design autocompletion for daily documentation
   - ?button
   - ?leads to form
@@ -25,3 +29,10 @@
 - [ ]later: check how many rows are created in table
   - does it hold a schoolyear (<100000 rows)
   - archive old schoolyears to prevent running into limit
+
+## ideas
+- organize bases:
+  - Woche, Monat, Schuljahr
+  - unterschiedliche Granularität (Tag, Woche, Monat)
+  - Archiv: vergangene Schuljahre
+- Ferien ausblenden (vorangegangener Schultag = vor den Ferien)
