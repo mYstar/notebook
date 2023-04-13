@@ -41,4 +41,5 @@
 - **SHIFT + F8**: step out
 - **F9**: continue
 
-# Tools
+# Info
+- **STRG + P**: show arguments when calling function

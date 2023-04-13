@@ -79,6 +79,9 @@ function acceptStatus(Status $s) {}
 - `htmlspecialchars()`: encodes characters for display on website
 - `trigger_error()`: display error message
     - whi: error level ab `E_USER_WARNING` zeigen den Fehler an, default `E_USER_NOTICE` nicht
+- `assert()`: tests assumptions -> triggers exception
+- `is_string()`, `is_int()`: check for types
+- `$obj instanceof <class, baseclass, interface>`: check objects
 - `json_encode($var)`: encodes $var content as json string 
 - `header('Location: ' . $url)`: sends a raw http header (here: to redirect to `$url`)
 - `array_reduce($array, callback, startvalue)`

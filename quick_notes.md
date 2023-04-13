@@ -1,40 +1,20 @@
 # diary
-- orga:
-  - dayplan 1h OK
-  - Urlaub beantragen
-  - review 1h -> 30'
-  - planning 1h -> 45'
-- review: Feature/IT-1096 uberschriften 1h -> 30'
-- finalize bugfix IT-1119 0.5h -> 1h
-- correct pull request: Feature/IT-1083 data warehouse datei upload ngp 2h OK
-  - stricter array declarations, code quality
-  - new whi-db features
-- plan REST interface 0.5h OK
-- bugfix: Anmelden auf Mailingliste ohne valide E-Mail -- 30' OK
-  - [X]fix & commit
-  - [X]deploy (from: origin/feature/IT-591-bilder-im-versionsvergleich-ubersichtlicher-machen)
-- buffer: babel 1.0h  OK
-- Männertag buy ticket (Breungeshain Waldsiedlung, Schotten) OK
+- bake OK
+- clean bath OK
+- monte research integration options 2h OK
+- read & work 2h OK
+- pass dishwasher in 1h OK
+- repair ipad 1h -> 1,5h
+- cook 1,5h OK
+- call Jenny 30' OK
 
 # TODO
-- [X]freier Tag verschoben: 17.05. -> 19.05.
-- [X]Urlaub: von 10.07. -> 04.08. beantragen
-- [X]?Markus: Should DataSource Hash be used like a password for the API? (Should be secure, when transmitted over HTTPS)
-- [X]neue whi-db features in ngp-upload nutzen
-- [X]?Markus: Was soll ich mit der Fehlermeldung machen?
-- [X]in monit Mailliste eintragen lassen
 - [ ]registry zugriff für docker
-- [X]Bugfix: wrong new codes number (change on automatic is counted)
-  - [X]new Branch
-  - [X]filter automatic codes later
-  - [X]distinct ICD and OPS for bargraph
-  - [X]remove time estimate
-  - [X]test on live db
-  - [X]Kommentar: nicht ganz exakte Zahl
-  - [X]pull request
 - [ ]whi-router: patientenbriefe.de
 - [ ]triaphon
 - [ ]tethering by telephone test
+- [ ]?What ist Zend?
+- [ ]?Whst is Opcache?
 
 # IT-1110
 - HELIOS Fallbezogene Daten:
@@ -67,3 +47,40 @@
 
 # planning
 - Vorbereitung: Backlog Pflege (Schätzungen anpassen)
+
+# pragmatic programmer
+- keep a sw engineering daybook
+- code defence
+  - assertions
+  - constraints
+  - validation
+  - check consistency
+- design by contract
+  - preconditions (caller responsible for input data)
+  - postconditions
+  - class invariants/state 
+    - conditions that are true always for an object (precise: before and after execution of every method)
+    - example: bank account not below limit
+  - error handling (when contract is broken, exceptions, always a bug)
+  - implementation:
+    - guard clauses can mimic this
+    - `assert` checking state at start of function -> preconditions
+    - check should have no side effects
+    - use like exceptions
+    - postconditions cannot be easily checked (different return points)
+    - assert is not preserved by inheritance
+    - boilerplate code would be necessary to check against old state of variables (not feasible)
+  - the caller is responsible for correct inputs
+    - check beforehand at the interfaces between libraries/real world
+- crashing
+  - raise exeptions early
+  - don't reraise exceptions, when you can't fix the problem -> just don't catch
+  - only use of catch: cleaning up
+  - Exceptions are for 'impossible' states -> program should not be able to run after reaching
+- error handling
+  - possible errors (like: user input, the ones that have a recovery scenario) -> check via `if` and handle result
+  - impossible errors (not expected behaviour) -> `assert`
+  - leave assertions in production -> only turn off the performance problematic
+
+# english
+- tenet --> Grundsatz
