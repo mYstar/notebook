@@ -8,6 +8,7 @@
 <? foreach(...): >
 <? endforeach; >
 ```
+- `__DIR__`,`__FILE__`: magic constants containing current fileinfo
 - `global $var`: macht $var aus dem globalen Kontext in scope bekannt
     - kann auch eine noch nicht definierte Variable sein (Zuweisung definiert sie)
     - `$GLOBALS['var']`: zugriff auf alle globalen Variablen via Array

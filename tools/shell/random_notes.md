@@ -2,6 +2,7 @@
 - `ln -s full_path_name link_full_path`
 - `groups username`: lists all groups a user is in
 - `mkpasswd -m SHA-512 <password>`: generate a password string
+- `sudo update-alternatives --config <program>`
 
 ## dig
 

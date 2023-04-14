@@ -1,4 +1,7 @@
 # acceptance
+- db module
+  - `$I->seeInDatabase()`: check for DB effects
+  - dump sql file before all tests(populate)/each test(cleanup)
 
 # unit
 - classes:
